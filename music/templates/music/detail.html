@@ -1,0 +1,13 @@
+{% extends 'music/base.html' %}
+{% block title %}Album Details{% endblock %}
+{% block body %}
+    <img src="{{ album.album_logo.url }}" height="400" width="800"/>
+
+    <h1>{{ album.album_title }}</h1>
+    <h2>{{ album.artist }}</h2>
+
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+
+{% endblock %}
